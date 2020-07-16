@@ -25,36 +25,47 @@ public class PhotoQuiz {
 
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
-		// “Copy Image Address”)
-
+		
+String starbucks = "https://www.logogenie.net/images/articles/starbucks-logo1.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-
+Component c;
 		// 3. use the "createImage()" method below to initialize your Component
-
+c = createImage(starbucks);
 		// 4. add the image to the quiz window
-
+quizWindow.add(c);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String answer1 = JOptionPane.showInputDialog(null,"What logo is this?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+if(answer1.equalsIgnoreCase("starbucks")){
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+     quizWindow.remove(c);
 		// 10. find another image and create it (might take more than one line
 		// of code)
 
+String microsoft = "https://lh3.googleusercontent.com/proxy/0goCqylxX2lEXaOzYtc1aR49FbsVEoWrYnhgWO3U7nbBN5eXBQu3Ii_zZeunzOfDhIp0R5G4nvKF82PcTw8DicxwyMP2hViRGAIb9BbP9UMGJh0HmB2jNIaNVZpbyPuFsNVkJw";
+     Component d;
+d=createImage(microsoft);
 		// 11. add the second image to the quiz window
-
+quizWindow.add(d);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String answer2 = JOptionPane.showInputDialog(null, "Which logo is this?");
 		// 14+ check answer, say if correct or incorrect, etc.
-
+if(answer2.equals("microsoft")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+	}else {
+		JOptionPane.showMessageDialog(null, "INCORRECT");
+	}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
