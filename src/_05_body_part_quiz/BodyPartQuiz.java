@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(250, 250);
 
 		showNextImage();
 
@@ -51,7 +51,7 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
@@ -59,7 +59,14 @@ public class BodyPartQuiz {
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if(guess.equals("arnold")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!!!");
+	score++;
+	JOptionPane.showInternalMessageDialog(null, "Your score is: " + score);
+}else {
+	JOptionPane.showMessageDialog(null, "WRONG!!! It is actually: arnorld !");
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
@@ -67,7 +74,35 @@ public class BodyPartQuiz {
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
-
+		String guesstwo = JOptionPane.showInputDialog("who is this?");
+if(guesstwo.equals("leonardo")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!!!");
+	score++;
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}else {
+	JOptionPane.showMessageDialog(null, "WRONG!!! It is actually: leonardo !");
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}
+showNextImage();
+String guessthree = JOptionPane.showInputDialog("who is this?");
+if(guessthree.equals("morgan")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!!!");
+	score++;
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}else {
+	JOptionPane.showMessageDialog(null, "WRONG!!! It is actually:morgan !");
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}
+showNextImage();
+String guessfour = JOptionPane.showInputDialog("who is this?");
+if(guessfour.equals("jack")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!!!");
+	score++;
+	JOptionPane.showMessageDialog(null, "Your score is: " + score);
+}else {
+	JOptionPane.showMessageDialog(null, "WRONG!!! It is actually: jack !");
+	JOptionPane.showMessageDialog(null, "Your final score is: " + score);
+}
 		// 9. Show them their current score
 
 	}
