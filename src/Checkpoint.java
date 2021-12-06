@@ -3,6 +3,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class Checkpoint implements KeyListener {
 public  void stuff() {
@@ -25,7 +26,7 @@ static void speak(String words) {
 @Override
 public void keyPressed(KeyEvent arg0) {
 	// TODO Auto-generated method stub
-	speak("Ouch");
+	JOptionPane.showMessageDialog(null,"Ouch");
 }
 @Override
 public void keyReleased(KeyEvent arg0) {
